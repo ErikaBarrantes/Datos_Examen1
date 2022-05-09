@@ -1,0 +1,275 @@
+ 621  mkdir Examen1
+  622  cd Examen1
+  623  ls -l
+  624  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/220/155/GCF_002220155.1_ASM222015v1/GCF_002220155.1_ASM222015v1_genomic.fna.gz
+  625  gunzip GCF_002220155.1_ASM222015v1_genomic.fna.gz
+  626  ls -l
+  627  mv GCF_002220155.1_ASM222015v1_genomic.fna a.chroococcum.fna
+  628  ls -l
+  629  cat a.chroococcum.fna
+  630  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/220/155/GCF_002220155.1_ASM222015v1/GCF_002220155.1_ASM222015v1_genomic.fna.gz
+  631  gunzip GCF_002220155.1_ASM222015v1_genomic.fna.gz
+  632  rm  GCF_002220155.1_ASM222015v1_genomic.fna
+  633  ls -l
+  634  wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/741/825/GCF_000741825.1_ASM74182v1/GCF_000741825.1_ASM74182v1_genomic.fna.gz
+  635  gunzip GCF_000741825.1_ASM74182v1_genomic.fna.gz
+  636  ls -l
+  637  mv GCF_000741825.1_ASM74182v1_genomic.fna d.acidovorans.fna
+  638  ls-l
+  639  ls -l
+  640  less d.acidovorans.fna
+  641  nano examenblast
+  642  sbatch examenblast
+  643  squeue
+  644  ls -l
+  645  less examenblast.txt
+  646  ls -l
+  647  less a.chroococcum.fna
+  648  cd ..
+  649  cd informe1/
+  650  ls -l
+  651  nano blast.slurm
+  652  cd ..
+  653  cd examen1
+  654  cd Examen1
+  655  ls -l
+  656  re examenblast
+  657  rm examenblast
+  658  rm examenblast.txt
+  659  ls -l
+  660  nano examenblast.slurm
+  661  sbatch examenblast.slurm
+  662  squeue
+  663  ls -l
+  664  less blast_informe1.txt
+  665  less examenblast.txt
+  666  nano examenblast.slurm
+  667  sbatch examenblast.slurm
+  668  squeue
+  669  less examenblast.txt
+  670  ls -l
+  671  squeue
+  672  ls -l
+  673  less examenblast.slurm
+  674  less examenblast.txt
+  675  awk ' $3 >=70 ' exmaenblast.txt > examenblastmayor70.txt
+  676  awk ' $3 >=70 ' examenblast.txt > examenblastmayor70.txt
+  677  ls -l
+  678  cat examenblastmayor70.txt
+  679  awk ' $3 <=50 ' examenblast.txt > examenblastmenor50.txt
+  680  ls -l
+  681  less examenblastmenor50.txt
+  682  awk ' $3 <50 ' examenblast.txt -> examenblastmenor50
+  683  less examenblastmenor50.txt
+  684  examenblastmenor50.txt
+  685  examenblastmenor50.txt
+  686  cat examenblastmenor50.txt
+  687  ls -l
+  688  cat examenblastmenor50.txt
+  689  rm examenblastmenor50.txt
+  690  ls -l
+  691  less examenblastmayor70.txt
+  692  awk -h
+  693  ls -l
+  694  awk ' $3 < 50 ' examenblast.txt > examenblastmenor50.txt
+  695  kess examenblastmenor50.txt
+  696  less examenblastmenor50.txt
+  697  awk ' $3 <=50 ' examenblast.txt > examenblastmenor50.txt
+  698  less examenblastmenor50.txt
+  699  awk ' $3 <=50 ' examenblast.txt > examenblastmenor50.txt
+  700  ls -l
+  701  less examenblastmenor50.txt
+  702  awk ' $3 <=70 ' examenblast.txt > examenblastmenor70.txt
+  703  less examenblastmenor70.txt
+  704  less examenblastmenor50.txt ls -l
+  705  awk ' $3 50-70 ' examenblast.txt > examenblast50-70.txt
+  706  ls -l
+  707  less examenblast50-70.txt
+  708  awk ' $3 >50 - <70 ' examenblast.txt > examenblast50-70.txt
+  709  awk ' $3 >50  <70 ' examenblast.txt > examenblast50-70.txt
+  710  awk ' $3 >50 | <70 ' examenblast.txt > examenblast50-70.txt
+  711  awk ' $3 >50 || <70 ' examenblast.txt > examenblast50-70.txt
+  712  awk ' $3 >50 || $3 <70  ' examenblast.txt > examenblast50-70.txt
+  713  less examenblast50-70.txt
+  714  awk ' $3 >50 || <70 ' examenblast.txt > examenblast50-70.txt
+  715  awk ' $3 =>50 || $3 =<70  ' examenblast.txt > examenblast50-70.txt
+  716  awk ' $3 >50 || $3 <70  ' examenblast.txt > examenblast50-70.txt
+  717  ls -l
+  718  awk '{print $2"\t"$7"\t"$8}' examenblastmayor70.txt > mayor70.bed
+  719  ls -l
+  720  less mayor70.bed
+  721  nano examenbedtools.slurm
+  722  cat a.chroococcum.fna d.acidovorans.fna > genomas.fna
+  723  ls -l
+  724  less genomas.fna
+  725  nano examenbedtools.slurm
+  726  sbatch examenbedtools.slurm
+  727  squeue
+  728  ls -l
+  729  less examenbedtools.txt
+  730  less mayor70.bed
+  731  less examenbedtools.slurm
+  732  nano examenbedtools.slurm
+  733  sbatch examenbedtools.slurm
+  734  squeue
+  735  ls -l
+  736  nano examenbedtools.slurm
+  737  less examenbedtools.txt
+  738  nano examenbedtools.slurm
+  739  less examenbedtools.txt
+  740  cd Examen1
+  741  ls -l
+  742  cd Examen1
+  743  ls -l
+  744  cd Examen1
+  745  ls -l
+  746  cd Examen1
+  747  ls -l
+  748  ]$ awk '{if ( $3 =>50 && $3 =<70) print  $0}' examenblast.txt
+  749  ]$ awk '{if ( $3 =>50 && $3 <=70) print  $0}' examenblast.txt
+  750  ]$ awk '{if ( $3 >=50 && $3 <=70) print  $0}' examenblast.txt
+  751  ]$ awk '{ if ($3 >=50 && $3 <=70) print  $0}' examenblast.txt
+  752  clear
+  753  ls -l
+  754  cd Examen1/
+  755  ls -l
+  756  awk '{ if ($3 >=70 ||  $3 <= 77) print $0}' examenblast.txt
+  757  awk '{ if ($3 >=50 ||  $3 <= 70) print $0}' examenblast.txt
+  758  awk '{ if ($3 >=50 &&  $3 <=
+  759  ls -l
+  760  less examenbedtools.txt
+  761   ls -l
+  762  exit
+  763  cd Examen1/
+  764  ls l
+  765  ls -l
+  766  cd Examen1/
+  767  ls -l
+  768  history
+  769  awk '{ if ($3 >=50 ||  $3 <= 70) print $0}' examenblast.txt
+  770  history
+  771  awk '{ if ($3 >=50 &&  $3 <= 70) print $0}' examenblast.txt
+  772  ls -l
+  773  awk '{ if ($3 >=50 &&  $3 <= 70) print $0}' examenblast.txt > examenblast50-70.txt
+  774  ls -l
+  775  lees examenbedtools.txt
+  776  less examenbedtools.txt
+  777  sed 's/F.*/\t/g' examenbedtools.txt print
+  778  history
+  779  nano examenbedtools.slurm
+  780  sed 's/F.*/\t/g' examenbedtools.txt > bedtoolsmayor70.txt
+  781  ls -l
+  782  less bedtoolsmayor70.txt
+  783  nano examenbedtools.slurm
+  784  sed 's/F.*//g' examenbedtools.txt >exbedtoolsmayor70.txt
+  785  ls -l
+  786  less exbedtoolsmayor70.txt
+  787  history
+  788  ls -l
+  789  cd Examen1/
+  790  ls -l
+  791  history
+  792  cd Examen1/
+  793  ls -l
+  794  head examenblast.txt
+  795  cd ..
+  796  cd bioinformatica/
+  797  cd clase6
+  798  ls -l
+  799  cd ..
+  800  cd Examen1/
+  801  ls -l
+  802  head examenblastmayor70.txt
+  803  grep "NZ" examenblastmayor70.txt | wc -l
+  804  grep "NZ" examenblast.txt | wc -l
+  805  history <
+  806  history
+  807  cd Examen1/
+  808  ls -l
+  809  history
+  810  ls -l
+  811  history
+  812  less examenblast.txt
+  813   awk '{print $2"\t"$7"\t"$8}' examenblast.txt > examenblast.bed
+  814  ls -l
+  815  nano examenbedtools.slurm
+  816  sbatch examenbedtools.slurm
+  817  ls -l
+  818  less examenbedtoolscompleto.txt
+  819  history
+  820  sed 's/F.*//g' examenbedtoolscompleto.txt >exbedtoolscompleto.txt
+  821  less exbedtoolscompleto.txt
+  822  cd ..
+  823  cd bioinformatica/
+  824  cd clase6
+  825  ls -l
+  826  cd Examen1/
+  827  ls -l
+  828  cd Examen1/
+  829  ls -l
+  830  cd Examen1/
+  831  ls -l
+  832  module avial
+  833  anvi-interactive -p Merged/PROFILE.db -c contigs.db --server-only -I 127.0.0.1 -P 8080
+  834  $ conda --version
+  835  conda 4.9.2
+  836  module load conda 4.9.2
+  837  conda update conda
+  838  module avial
+  839  module load clustalw/2.1
+  840  crustal
+  841  crustalw
+  842  clustalw2
+  843  ls -l
+  844  head exbedtoolsmayor70.txt
+  845  clustalw2
+  846  ls -l
+  847  history
+  848  sed 's/-/\t/g' exbedtoolsmayor70.txt
+  849  q
+  850  sed -i 's/-/\t/g' exbedtoolsmayor70.txt
+  851  sed -i 's/:/\t/g' exbedtoolsmayor70.txt
+  852  less exbedtoolsmayor70.txt
+  853  clustalw2
+  854  cd Examen1/
+  855  ls -l
+  856  head examenblast.txt
+  857  history
+  858  module load seqkit/0.7.1seqkit -h
+  859  module load seqkit/0.7.1
+  860  seqkit -h
+  861  ls -l
+  862  head exbedtoolsmayor70.txt
+  863  mv exbedtoolsmayor70.txt exbedtoolsmayor70.fasta
+  864  ls -l
+  865  seqkit rmdup exbedtoolsmayor70.fasta > exbedtoolsmayor70.fasta
+  866  module load
+  867  module avial
+  868  module load clustalw/2.1
+  869  clustalw2
+  870  less exbedtoolsmayor70.fasta
+  871  ls -l
+  872  less bedtoolsmayor70.txt
+  873  history
+  874   sed -i 's/-/\t/g' bedtoolsmayor70.txt
+  875  less bedtoolsmayor70.txt
+  876   sed -i 's/:/\t/g' bedtoolsmayor70.txt
+  877  less bedtoolsmayor70.txt
+  878  cp bedtoolsmayor70.txt exbedtooldmayor70.fasta
+  879  ls -l
+  880  less exbedtooldmayor70.fasta
+  881  clustalw2
+  882  sed -i 's/-//g'exbedtooldmayor70.fasta
+  883  sed -i 's/-//g' exbedtooldmayor70.fasta
+  884  sed -i 's/://g' exbedtooldmayor70.fasta
+  885  less exbedtooldmayor70.fasta
+  886  sed -i 's/ /_/g' exbedtooldmayor70.fasta
+  887  less exbedtooldmayor70.fasta
+  888  cp bedtoolsmayor70.txt exmayor70bed.fasta
+  889  ls -l
+  890  less exmayor70bed.fasta
+  891  sed -i 's/\t/_/g' exbedtooldmayor70.fasta
+  892  less exbedtooldmayor70.fasta
+  893  clustalw2
+  894  seqkit rmdup exbedtooldmayor70.fasta > exmayor70.fasta
+  895  clustalw2
